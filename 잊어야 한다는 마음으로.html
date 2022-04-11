@@ -3,12 +3,17 @@
 <head>
     <title>IU</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="colors.js"></script>
+<!--
+document는 함수
+querySelector는 함수이면서 객체 속에 속해있는 method
+-->
 <!--
 a = 모든 a들을 지칭하는 selector
 selector가 지정하는 태그들에 대해 어떤 효과를 줄지 정하는 declaration
 color는 속성 property red는 값 Value
 -->
-<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <!--
@@ -22,44 +27,65 @@ a는 링크를 h1은 제목, font는 디자인이라는 정보를 나타낸다.
       <li><a href="잊어야 한다는 마음으로.html" style="color:purple">>IU</a> </li>
       <li><a href="비가 오는 날엔.html">Heize</a></li>
     </ol>
-  <!--
-  <h1><a href="index.html">Pandora's Box</h1>
-  <ol>
-    <li><a href="Driver's License.html"><font color="Black">Olivia Rodrigo</li>
-    <li><a href="잊어야 한다는 마음으로.html"><font color="Black">IU </li>
-    <li><a href="비가 오는 날엔.html"><font color="Black">Heize</li>
-  </ol>
-  -->
-    <div id="article">
-      <h2><a href="https://youtu.be/ZXmoJu81e6A" target="_blank">잊어야 한다는 마음으로</a> </h2>
-      <iframe width="560" height="315" src="https://youtu.be/ZXmoJu81e6A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-      <img src="https://mblogthumb-phinf.pstatic.net/MjAxODAxMTdfMTE1/MDAxNTE2MTkyNTY0ODU2.E2FuyONhisZpRsPF0ZbLvMX_4hklbOgxKpiqRCVS-esg.buW1OiStogKjmLKzve4LIrU2G5yT7GAUqVUpredBGpQg.JPEG.presence4/01.jpg?type=w800">
+      <div id="article">
+        <h2
+        style="color-powderblue;"><a href="https://youtu.be/ZXmoJu81e6A" target="_blank">잊어야 한다는 마음으로</a></h2>
+        <p>
+          <!--
+          <input type="button" value="Darkmode" onclick="
+          document.querySelector('body').style.backgroundColor = 'black';
+          document.querySelector('body').style.color = 'white'
+          ">
+          <input type="button" value="Lightmode" onclick="
+          document.querySelector('body').style.backgroundColor = 'white';
+          ">
+          -->
+          <input type="button" name="" value="Darkmode" onclick="
+          darkModeHandler(this);
+          ">
+        </p>
+        <iframe width="560" height="315" src="https://youtu.be/ZXmoJu81e6A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+        <img src="https://mblogthumb-phinf.pstatic.net/MjAxODAxMTdfMTE1/MDAxNTE2MTkyNTY0ODU2.E2FuyONhisZpRsPF0ZbLvMX_4hklbOgxKpiqRCVS-esg.buW1OiStogKjmLKzve4LIrU2G5yT7GAUqVUpredBGpQg.JPEG.presence4/01.jpg?type=w800">
 
-    <p>잊어야 한다는 마음으로 <br>
-    내 텅빈 방문을 닫은 채로 <br>
-    아직도 남아 있는 너의 향기 <br>
-    내 텅빈 방안에 가득한데</p>
-    <p>이렇게 홀로 누워 천정을 보니 <br>
-    눈앞에 글썽이는 너의 모습 <br>
-    잊으려 돌아 누운 내 눈가에 <br>
-    말없이 흐르는 이슬방울들</p>
-    <p>지나간 시간은 추억속에 <br>
-    묻히면 그만인 것을 <br>
-    나는 왜 이렇게 긴긴 밤을 <br>
-    또 잊지 못해 새울까</p>
-    <p>창틈에 기다리던 새벽이 오면 <br>
-    어제보다 커진 내 방 안에 <br>
-    하얗게 밝아온 유리창에 썼다 지운다 <br>
-    널 사랑해</p>
-    <p>밤하늘에 빛나는 수많은 별들 <br>
-    저마다 아름답지만 <br>
-    내 맘속에 빛나는 별 하나 <br>
-    오직 너만 있을 뿐이야</p>
-    <p>창틈에 기다리던 새벽이 오면 <br>
-    어제보다 커진 내 방 안에 <br>
-    하얗게 밝아온 유리창에 썼다 지운다 <br>
-    널 사랑해</p>
+        <p>잊어야 한다는 마음으로</span> <br>
+        내 텅빈 방문을 닫은 채로 <br>
+        아직도 남아 있는 너의 향기 <br>
+        내 텅빈 방안에 가득한데</p>
+        <p>이렇게 홀로 누워 천정을 보니 <br>
+        눈앞에 글썽이는 너의 모습 <br>
+        잊으려 돌아 누운 내 눈가에 <br>
+        말없이 흐르는 이슬방울들</p>
+        <p>지나간 시간은 추억속에 <br>
+        묻히면 그만인 것을 <br>
+        나는 왜 이렇게 긴긴 밤을 <br>
+        또 잊지 못해 새울까</p>
+        <p>창틈에 기다리던 새벽이 오면 <br>
+        어제보다 커진 내 방 안에 <br>
+        하얗게 밝아온 유리창에 썼다 지운다 <br>
+        널 사랑해</p>
+        <p>밤하늘에 빛나는 수많은 별들 <br>
+        저마다 아름답지만 <br>
+        내 맘속에 빛나는 별 하나 <br>
+        오직 너만 있을 뿐이야</p>
+        <p>창틈에 기다리던 새벽이 오면 <br>
+        어제보다 커진 내 방 안에 <br>
+        하얗게 밝아온 유리창에 썼다 지운다 <br>
+        널 사랑해</p>
+        <input type="button" name="" value="Darkmode" onclick="
+        var target = document.querySelector('body');
+        if(this.value === 'Darkmode'){
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        this.value = 'Lightmode';
+        }
+        else{
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        this.value = 'Darkmode';
+        }
+        ">
     </div>
   </div>
+
 </body>
 </html>
